@@ -1,4 +1,4 @@
-package com.blankproject;
+package com.nutrigeek;
 
 import android.app.Application;
 

@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class BlankProject extends Component {
+export default class NutriGeek extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('BlankProject', () => BlankProject);
+AppRegistry.registerComponent('NutriGeek', () => NutriGeek);

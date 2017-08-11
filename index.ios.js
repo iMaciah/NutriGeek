@@ -12,10 +12,11 @@ import {
   View
 } from 'react-native';
 
-export default class BlankProject extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
+import Onboarding from 'react-native-simple-onboarding';
+
+const App = () => {
+  return (
+	<View>  
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -26,7 +27,22 @@ export default class BlankProject extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-      </View>
+    </View>
+  );
+}
+
+export default class NutriGeek extends Component {
+  render() {
+    return (
+		<Onboarding
+		  pages={[
+		    { backgroundColor: '#fff', image:<App/>, title: 'Simple Messenger UI', subtitle: 'Implemented in React Native' },
+		    { backgroundColor: "#fe6e58", image:<App/>, title: 'Welcome', subtitle: 'To Earth' },
+		    { backgroundColor: "#999", image:<App/>, title: 'Also', subtitle: 'Mars is nice' },
+		    { backgroundColor: "#999", image:<App/>, title: 'I am just a cat', subtitle: 'and i am doing cat stuff' },
+		  ]}
+		  onEnd={alert('ola')}
+		/>
     );
   }
 }
@@ -50,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('BlankProject', () => BlankProject);
+AppRegistry.registerComponent('NutriGeek', () => NutriGeek);

@@ -1,3 +1,3 @@
-rootProject.name = 'BlankProject'
+rootProject.name = 'NutriGeek'
 
 include ':app'
